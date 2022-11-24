@@ -6,41 +6,39 @@ function getComputerChoice() {
     return computerChoice
 }
 //function to get users choice of rock paper or scissors
-function getUserChoice() {
-    let userChoice = prompt("Please make your choice, rock, paper, or scissors: ")
-    return userChoice
-}
 
+const UserChoice = prompt("Please make your choice, rock, paper, or scissors: ").toLowerCase()
+const ComputerChoice = getComputerChoice()
 
 //function to play a round comparing user choice to computer choice with a win lose and draw conditional
-function playRound(getComputerChoice,getUserChoice) {
-    if (getComputerChoice === "rock" && getUserChoice === "scissors") {
+function playRound(ComputerChoice,UserChoice) {
+    if (ComputerChoice === "rock" && UserChoice === "scissors") {
         return alert("You lose. Rock beats scissors :(")
     }
-    else if (getComputerChoice === "rock" && getUserChoice ==="rock") {
+    else if (ComputerChoice === "rock" && UserChoice ==="rock") {
         return alert("You both chose rock. It's a tie.")
     }
-    else if (getComputerChoice === "rock" && getUserChoice === "paper") {
+    else if (ComputerChoice === "rock" && UserChoice === "paper") {
         return alert("You win. Paper beats rock :)")
     }
-    else if (getComputerChoice === "paper" && getUserChoice === "rock") {
+    else if (ComputerChoice === "paper" && UserChoice === "rock") {
         return alert("You lose. Paper beats rock :(")
     }
-    else if (getComputerChoice === "paper" && getUserChoice === "paper") {
+    else if (ComputerChoice === "paper" && UserChoice === "paper") {
         return alert("You both chose paper. It's a tie.")
     }
-    else if (getComputerChoice === "paper" && getUserChoice === "scissors") {
+    else if (ComputerChoice === "paper" && UserChoice === "scissors") {
         return alert("You win. Scissors beats paper :)")
     }
-    else if (getComputerChoice === "scissors" && getUserChoice === "rock") {
+    else if (ComputerChoice === "scissors" && UserChoice === "rock") {
         return alert("You win. Rock beats scissors :)")
     }
-    else if (getComputerChoice === "scissors" && getUserChoice === "paper") {
+    else if (ComputerChoice === "scissors" && UserChoice === "paper") {
        return alert("You lose. Scissors beats paper :(")
     }
-    else if (getComputerChoice === "scissors" && getUserChoice === "scissors") {
+    else if (ComputerChoice === "scissors" && UserChoice === "scissors") {
         return alert("You both chose scissors. It's a tie.")
     }
 }
 
-console.log(playRound(getComputerChoice(),getUserChoice()))
+console.log(playRound(ComputerChoice,UserChoice))
